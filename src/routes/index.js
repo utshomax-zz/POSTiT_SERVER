@@ -1,4 +1,5 @@
 const locController = require('../controllers/locController')
+const userController = require('../controllers/userController')
 const { schema } = require('../models/locdata')
 
 const routes = [
@@ -6,6 +7,21 @@ const routes = [
     method: 'GET',
     url: '/api/locs',
     handler: locController.getAll
+  },
+  {
+    method: 'POST',
+    url: '/api/isUser',
+    handler: userController.isUser
+  },
+  {
+    method: 'GET',
+    url: '/api/user',
+    handler: userController.getAll
+  },
+  {
+    method: 'GET',
+    url: '/api/oneUser/:id',
+    handler: userController.getSingleUsers
   },
   {
     method: 'GET',
@@ -16,6 +32,11 @@ const routes = [
     method: 'POST',
     url: '/api/locs',
     handler: locController.addLoc
+  },
+  {
+    method: 'POST',
+    url: '/api/user',
+    handler: userController.addUsers
   },
   {
     method: 'PUT',
