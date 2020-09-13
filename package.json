@@ -1,10 +1,10 @@
 {
   "name": "podts",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Nodejs and fastify backend for LOCATION tracking",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": " nodemon ./src/index.js",
+    "start": " node ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "utsabutsho",
