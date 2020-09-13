@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 const uri=process.env.MONGODB_URI ||'mongodb://localhost/podtsdb';
 
   // Connect to DB
-mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false})
    .then(() => console.log('MongoDB connected…'))
    .catch(err => console.log(err))
 
