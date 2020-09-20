@@ -12,9 +12,8 @@ const routes = require('./src/routes')
 
 const mongoose = require('mongoose')
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI='mongodb+srv://utshomax:utsho9009@@podtscluster.yszmo.mongodb.net/<dbname>?retryWrites=true&w=majority'
-
-const uri='mongodb://localhost/podtsdb';
+//const MONGODB_URI='mongodb+srv://utshomax:utsho9009@@podtscluster.yszmo.mongodb.net/<dbname>?retryWrites=true&w=majority'
+const uri=process.env.MONGODB_URI ||'mongodb://localhost/podtsdb';
 
   // Connect to DB
 mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false})
