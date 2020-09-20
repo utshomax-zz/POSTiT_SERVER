@@ -5,7 +5,7 @@ const locSchema = new mongoose.Schema({
   b_id:String,
   name: String,
   oname: String,
-  mobile:Number,
+  mobile:String,
   d_loc:{
     post_n:String,
     post_no:String,

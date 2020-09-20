@@ -32,18 +32,18 @@ exports.isUser = async (req, res) => {
                 password: password
             }
         } else {
-            return {'msg':'error'}
+            return {'msg':'length error'}
         }
         console.log(data) 
         const result= await User.findOne(data, function(err, user) {
 
             if (err) {
-                return {'msg':'error'}
+                return {'msg':'db error'}
             }
             return user 
         });
         if(result){
-            return result
+            return {'status':1,'id':result._id}
         }
         return {'status':0,'msg':'no user found'}
        

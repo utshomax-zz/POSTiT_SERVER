@@ -15,7 +15,8 @@ const routes = [
   },
   {
     method: 'GET',
-    url: '/api/user',
+    url: '/api/users',
+    
     handler: userController.getAll
   },
   {

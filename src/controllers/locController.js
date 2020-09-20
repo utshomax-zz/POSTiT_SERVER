@@ -24,9 +24,12 @@ exports.getAll = async (req, reply) => {
 
 exports.addLoc = async (req, reply) => {
     try {
-      const loc = new Loc(req.body)
+     
+      const data= req.body
+      const loc = new Loc(data)
       return loc.save()
     } catch (err) {
+      //console.log(err)
       throw boom.boomify(err)
     }
   }
